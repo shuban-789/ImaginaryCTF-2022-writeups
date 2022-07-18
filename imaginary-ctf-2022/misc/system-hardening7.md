@@ -104,8 +104,17 @@ If you try enabling the firewall, an interesting warning pops up warning that th
 ![libwarn](https://cdn.discordapp.com/attachments/998111098559549540/998723945094205440/unknown.png)
 
 ### All users removed from shadow group (4pts)
+It is a good practice to check the /etc/group file to see if the right users are in the right group. Groups have permissions and it can be problematic if the wrong user is in the wrong group as the wrong user has access to permissions. The user roopog was in the shadow group. Now, in the README it did not state that it was okay for roopog to be in the shadow group, and thus, we need to remove him. To do this open the /etc/group file using a text editor (this writeup will use gedit). We can type the command “sudo gedit /etc/group” to open the file, and simply delete the user roopog’s name from the shadow group.
+![shadofpog](https://cdn.discordapp.com/attachments/998111098559549540/998721085359005806/unknown.png)
 
 ### Administrator group members correct (4pts)
+The README specifies that only rooYay should be an administrator. Administrator privileges can be controlled using groups as well as anyone in the “sudo” group basically has access to the sudo command which lets it execute commands as root. We do not want everyone to have access to the sudo command. That is why we need to check /etc/group to make sure only authorized admins have access to that command. We can use the command “sudo gedit /etc/group” to open the group file. The sudo group has basically every single user on the system when we do this, which is not something good as we should only be giving sudo access to those users who are stated as administrators in the README. To fix this, we can simply remove the username of everyone who is not authorized to use the sudo command.
+
+Before:
+![baddy](https://cdn.discordapp.com/attachments/998111098559549540/998727062066057257/unknown.png)
+
+After:
+![goody](https://cdn.discordapp.com/attachments/998111098559549540/998727475213381683/unknown.png)
 
 ### Address space layout randomization enabled (4pts)
  
