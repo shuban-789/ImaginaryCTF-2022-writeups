@@ -50,6 +50,8 @@ EXAMPLE: /home/rooyay/Desktop/backdoor.py
 ANSWER: /lib/libsocket.so
 
 ```
+If you enable the firewall using the “sudo ufw enable” command, it will give a warning that /lib is word writable. This is not default. So when first approaching this question, the /lib directory would be a good place to look. If you look at the /lib directory there is a file called libsocket.so, a file which has a name that should already spark a red flag on some backdoor activity due to the “socket” in its name.
+![liblab](https://cdn.discordapp.com/attachments/998111098559549540/998706414170157166/unknown.png)
 
 ### Forensic Question 3 (10pts)
 ```
@@ -64,6 +66,8 @@ EXAMPLE: rooamogus
 ANSWER: roomom
 
 ```
+To find a hidden user, or any user really, the best approach is to view the /etc/passwd file. You can use the cat command to do so and type “sudo cat /etc/passwd” into the terminal. If you view the users, you will come by an unauthorized user named roomom, except the catch is its UID is below 1000. On machines, all human users have a UID above 1000. Which is what makes roomom a hidden user.
+![hiddenmomuser](https://cdn.discordapp.com/attachments/998111098559549540/998721085359005806/unknown.png)
 
 ### Forensic Question 4 (10pts)
 ```
