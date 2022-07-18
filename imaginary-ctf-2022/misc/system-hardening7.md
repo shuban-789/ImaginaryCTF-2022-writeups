@@ -131,10 +131,12 @@ Kernel pointers point at a specific location in the kernel's memory. Attackers c
 Sysrq allows you to do a lot of functions such as resetting the machine by simply hitting buttons without logging in. To disable SYSRQ, we can do **kernel.sysrq = 0** in /etc/sysctl.conf
 
 ### Disabled SSH root login (4pts)
-Enabling root login for SSH can be pretty insecure as it can allow attackers to gain superuser privileges if they plan to breach your workstation via SSH. So it is always a good idea to set this parameter to "no". To apply this rule we can open the /etc/ssh/sshd_config file using "sudo gedit /etc/ssh/sshd_config", and then set the "PermitRooLogin" parameter to "no"
+Enabling root login for SSH can be pretty insecure as it can allow attackers to gain superuser privileges if they plan to breach your workstation via SSH. So it is always a good idea to set this parameter to "no". To apply this rule we can open the /etc/ssh/sshd_config file using "sudo gedit /etc/ssh/sshd_config", and then set the "PermitRooLogin" parameter to "no".
 ![sshroot](https://cdn.discordapp.com/attachments/998111098559549540/998732132321083503/unknown.png)
 
 ### Disabled SSH X11 Forwarding (4pts)
+X11 sessions weren’t created with security in mind. Servers can send X11 commands to the client, if the SSH server were to be compromised they could potentially hijack the X11 session with the client. To turn this off put X11Forward no in /etc/ssh/sshd_config.
+![x11](https://cdn.discordapp.com/attachments/998111098559549540/998738156855763024/unknown.png)
 
 ### Disabled SSH password login (4pts)
 Since the README stated that public key authentication should be used EXCLUSIVELY. In other words, we need to get rid of all other methods of authentication which in this case is password authentication. To apply this, you put "PasswordAuthentication no" in /etc/ssh/sshd_config.
@@ -149,7 +151,8 @@ The README states to use the ssh key provided in /root as the ssh key for rooyay
 ![key](https://cdn.discordapp.com/attachments/998111098559549540/998733530769133598/unknown.png)
 
 ### The Flag
-Once you complete all these tasks, and your ScoringReport says you have earned 100 points, the flag will be displayed on the ScoringReport
+Once you complete all these tasks, and your ScoringReport says you have earned 100 points, the flag will be displayed on the ScoringReport.
 ![flag](https://cdn.discordapp.com/attachments/998111098559549540/998736959772041236/unknown.png)
+
 Flag: ictf{5a6a9093a22d86502368e7c1d31de30851f8c5cd06419728e8ade8c67715de8f}
 ### Wrap-up
