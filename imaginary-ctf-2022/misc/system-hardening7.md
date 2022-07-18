@@ -67,7 +67,7 @@ ANSWER: roomom
 
 ```
 To find a hidden user, or any user really, the best approach is to view the /etc/passwd file. You can use the cat command to do so and type “sudo cat /etc/passwd” into the terminal. If you view the users, you will come by an unauthorized user named roomom, except the catch is its UID is below 1000. On machines, all human users have a UID above 1000. Which is what makes roomom a hidden user.
-![hiddenmomuser](https://cdn.discordapp.com/attachments/998111098559549540/998721085359005806/unknown.png)
+![hiddenmomuser](https://cdn.discordapp.com/attachments/998111098559549540/998721818124886116/unknown.png)
 
 ### Forensic Question 4 (10pts)
 ```
@@ -82,6 +82,10 @@ EXAMPLE: /bin/passwd
 ANSWER: /lib/x86_64-linux-gnu/security/pam_deny.so
 
 ```
+If you've ever participated in any Red team VS Blue team, you'll know attackers love messing up authentication. One of the tricks they can do is replace the contents of the module pam_permit and pam_deny. In a pam stack, pam_permit says "yes" to everything. It pretty much always succeeds. pam_deny says "no to everything" and it always returns failure. However, if you replace the contents of the module, everything will succeed meaning you can authenticate by putting in any password. We can check if this is happening by looking at the hashes of the file. 
+![shasumsussy](https://cdn.discordapp.com/attachments/998111098559549540/998706818266169444/unknown.png)
+
+The hashes are the same! pam_deny.so has been replaced with the contents of pam_permit.so.
 
 ### Forensic Question 5 (10pts)
 ```
