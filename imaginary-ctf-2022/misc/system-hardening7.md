@@ -147,3 +147,9 @@ The README specifically stated to enable public key authentication in ssh. To ap
 ### Set up SSH key for user rooYay (5pts)
 The README states to use the ssh key provided in /root as the ssh key for rooyay. To do this we can simply copy and paste /root/id_rsa.pub in /home/rooyay/.ssh/authorized_keys.
 ![key](https://cdn.discordapp.com/attachments/998111098559549540/998733530769133598/unknown.png)
+
+### The Flag
+Once you complete all these tasks, and your ScoringReport says you have earned 100 points, the flag will be displayed on the ScoringReport
+![flag](https://cdn.discordapp.com/attachments/998111098559549540/998736959772041236/unknown.png)
+Flag: ictf{5a6a9093a22d86502368e7c1d31de30851f8c5cd06419728e8ade8c67715de8f}
+### Wrap-up
