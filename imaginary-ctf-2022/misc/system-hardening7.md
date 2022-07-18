@@ -120,7 +120,7 @@ After:
 Address space layout randomization (ASLR) randomizes the position of processes in the memory. This can protect systems from many attacks such as buffer overflow or memory exploitations as they would first require prior knowledge of where things are located. You can enable ASLR protection in /etc/sysctl.conf with: **kernel.randomize_va_space = 2**
 
 ### Symlink protection enabled (4pts)
-Symlinks have been known for having huge security issues. For example, attackers can leverage processes that write to temporary files and create a symlink to a more sensitive file. Protected_symlinks only allow symlinks to be followed if certain security conditions are met. You can enable symlink protection in /etc/sysctl.conf with: **fs.protected_symlinks = 1**
+Symlinks have been known for having huge security issues. For example, attackers can leverage processes that write to temporary files and create a symlink to a more sensitive file. Protected_symlinks limits symlinks to be followed if certain security conditions are met. You can enable symlink protection in /etc/sysctl.conf with: **fs.protected_symlinks = 1**
 
 ### TCP SYN cookies enabled (4 pts)
 
