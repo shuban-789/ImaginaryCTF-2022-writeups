@@ -16,14 +16,74 @@ By: Shuban Pal, Will Cheng, Srijan Atti
 Here are all the vulnerabilities you had to fix in order to get 100 for the flag
 
 ### Forensic Question 1 (10pts)
+```
+This is a forensics question. Answer it below.
+
+------------------------------------------------
+ 
+We suspect that our server has been compromised through a download from an external site. What is the IP address of the site that we have been compromised through?
+ 
+EXAMPLE: 13.33.33.37
+ 
+ANSWER: 192.9.137.137
+
+```
 
 ### Forensic Question 2 (10pts)
+```
+This is a forensics question. Answer it below.
+
+------------------------------------------------
+ 
+The malicious file has created a backdoor for persistence. What is the full file path of the backdoor that has been created?
+ 
+EXAMPLE: /home/rooyay/Desktop/backdoor.py
+ 
+ANSWER: /lib/libsocket.so
+
+```
 
 ### Forensic Question 3 (10pts)
+```
+This is a forensics question. Answer it below.
+
+------------------------------------------------
+
+A malicious hidden user has been created after the initial attack. What is the username of this user?
+
+EXAMPLE: rooamogus
+
+ANSWER: roomom
+
+```
 
 ### Forensic Question 4 (10pts)
+```
+This is a forensics question. Answer it below.
+
+------------------------------------------------
+
+As another method of persistence, a system authentication mechanism has been sabotaged. What is the full file path to the file affected?
+
+EXAMPLE: /bin/passwd
+
+ANSWER: /lib/x86_64-linux-gnu/security/pam_deny.so
+
+```
 
 ### Forensic Question 5 (10pts)
+```
+This is a forensics question. Answer it below.
+
+------------------------------------------------
+
+Some user on this machine was reading a random stackoverflow article on how to install minecraft for free, and ended up messing up the permissions on a core system directory. Which directory was this?
+
+EXAMPLE: /etc/sudoers.d
+
+ANSWER: /usr/lib
+
+```
 
 ### All users removed from shadow group (4pts)
 
