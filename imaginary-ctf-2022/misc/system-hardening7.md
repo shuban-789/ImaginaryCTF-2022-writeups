@@ -32,6 +32,7 @@ In order to access a website, you need a browser. The browser that is being used
 ![ExposedHistory](https://www.imgonline.com.ua/result_img/imgonline-com-ua-twotoone-nXmHBWgMW7rG83.jpg)
 
 If you check in rooyay's downloads folder, you can find the file innocent2.xlsm. This has to be the file, because everything else in the downloads folder could not have come from any of these websites. When we click on innocent2.xlsm it redirects us to http://eth007.me/innocent2.xlsm. To figure the ip address of the website, we can just ping it:
+
 ![pingpong](https://cdn.discordapp.com/attachments/998111098559549540/998718726566330408/unknown.png)
 
 So the answer is 192.9.137.137.
