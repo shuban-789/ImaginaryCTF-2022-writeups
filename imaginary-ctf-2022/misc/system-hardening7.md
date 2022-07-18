@@ -9,4 +9,4 @@ By: Shuban Pal, Will Cheng, Srijan Atti
 
 ### Setup of the Desktop and Important Files
    The desktop contains 5 text files for the Forensic Questions, which each contain a question and a spot for the answer. Each Forensic Question correctly answered gives you 10 points. Then, there is a link to the README, a crucial file to work done on the system and a ScoringReport which helps you see how many points you have so far.
- ![DesktopUbuntu](Desktop.png)
+ ![DesktopUbuntu](https://cdn.discordapp.com/attachments/998111098559549540/998710864641269932/Desktop.png)
