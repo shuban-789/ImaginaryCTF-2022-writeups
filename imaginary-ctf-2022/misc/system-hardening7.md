@@ -120,20 +120,30 @@ After:
 Address space layout randomization (ASLR) randomizes the position of processes in the memory. This can protect systems from many attacks such as buffer overflow or memory exploitations as they would first require prior knowledge of where things are located. You can enable ASLR protection in /etc/sysctl.conf with: **kernel.randomize_va_space = 2**
 
 ### Symlink protection enabled (4pts)
-Symlinks have been known for having huge security issues. For example, attackers can leverage processes that write to temporary files and create a symlink to a more sensitive file. Protected_symlinks limits symlinks to be followed if certain security conditions are met. You can enable symlink protection in /etc/sysctl.conf with: **fs.protected_symlinks = 1**
+Symlinks have been known for having huge security issues. For example, attackers can leverage processes that write to temporary files and create a symlink to a more sensitive file. Protected_symlinks only allow symlinks to be followed if certain security conditions are met. You can enable symlink protection in /etc/sysctl.conf with: **fs.protected_symlinks = 1**
 
 ### TCP SYN cookies enabled (4 pts)
 
 ### Kernel pointers hidden from unprivileged users  (4 pts)
+Kernel pointers point at a specific location in the kernel's memory. Attackers can get a lot of information which can be used in several exploits. We want to hide these pointers regardless the privilege which we may do with **kernel.kptr_restrict = 2** in /etc/sysctl.conf
 
 ### Kernel SYSRQ key disabled (4pts)
+Sysrq allows you to do a lot of functions such as resetting the machine by simply hitting buttons without logging in. To disable SYSRQ, we can do **kernel.sysrq = 0** in /etc/sysctl.conf
 
 ### Disabled SSH root login (4pts)
+Enabling root login for SSH can be pretty insecure as it can allow attackers to gain superuser privileges if they plan to breach your workstation via SSH. So it is always a good idea to set this parameter to "no". To apply this rule we can open the /etc/ssh/sshd_config file using "sudo gedit /etc/ssh/sshd_config", and then set the "PermitRooLogin" parameter to "no"
+![sshroot](https://cdn.discordapp.com/attachments/998111098559549540/998732132321083503/unknown.png)
 
 ### Disabled SSH X11 Forwarding (4pts)
 
 ### Disabled SSH password login (4pts)
+Since the README stated that public key authentication should be used EXCLUSIVELY. In other words, we need to get rid of all other methods of authentication which in this case is password authentication. To apply this, you put "PasswordAuthentication no" in /etc/ssh/sshd_config.
+![sshpass](https://cdn.discordapp.com/attachments/998111098559549540/998731861775892490/unknown.png)
 
 ### Enabled SSH public key authentication (5pts)
+The README specifically stated to enable public key authentication in ssh. To apply this, you put "PubkeyAuthentication yes" in /etc/ssh/sshd_config.
+![pubkey](https://cdn.discordapp.com/attachments/998111098559549540/998732672442581094/unknown.png)
 
 ### Set up SSH key for user rooYay (5pts)
+The README states to use the ssh key provided in /root as the ssh key for rooyay. To do this we can simply copy and paste /root/id_rsa.pub in /home/rooyay/.ssh/authorized_keys.
+![key](https://cdn.discordapp.com/attachments/998111098559549540/998733530769133598/unknown.png)
