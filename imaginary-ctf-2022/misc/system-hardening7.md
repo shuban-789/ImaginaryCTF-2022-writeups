@@ -100,6 +100,8 @@ EXAMPLE: /etc/sudoers.d
 ANSWER: /usr/lib
 
 ```
+If you try enabling the firewall, an interesting warning pops up warning that the /lib directory is world writable. This is not default at all and means that the permissions for the lib directory are messed up. /lib is a core system directory and thus it is the answer to this question.
+![libwarn](https://cdn.discordapp.com/attachments/998111098559549540/998723945094205440/unknown.png)
 
 ### All users removed from shadow group (4pts)
 
