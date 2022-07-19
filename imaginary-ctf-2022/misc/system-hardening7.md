@@ -8,16 +8,17 @@ By: Shuban Pal, Will Cheng, Srijan Atti
 ### The Challenge
    rooReaper wasn't lying when he said that he would be back. Seems that he's infiltrated the roos' new workstation! Can you investigate and secure the system?
    The challenge is best played using VMware workstation player. However, you may be able to get it to work with other software. You will receive the flag when you reach       100 points.
+   
 ### Background
    To solve this challenge, you will need to download VMware workstation 16 player. Install the .7z file linked to the challenge and extract this file. Upon extraction open up the .vmx file found within the extracted folder. Upon loading you will be booted up into an Ubuntu 22.04 virtual machine with a README file, Scoring Report file, and Forensic Question files on your desktop. This problem requires a multistep solution in which you are required to patch vulnerabilities and answer forensics questions on the image to reach 100. Each vulnerability patched gives a certain amount of points dependent on the difficulty of the vulnerability and each Forensic Question gives a standard 10 points. Upon loading, the first step in securing this image would be to read the ReadMe file on your desktop containing addition information regarding the challenge such as scenario specific configuration requirements. This challenge should be quite familiar if you have competed in the Air and Space Force Association's annual CyberPatriot competition. 
 
 ### Setup of the Desktop and Important Files
-   The desktop contains 5 text files for the Forensic Questions, which each contain a question and a spot for the answer. Each Forensic Question correctly answered gives you 10 points. Then, there is a link to the README, a crucial file to work done on the system and a ScoringReport which helps you see how many points you have so far. Here is what the README looks like: https://eth007.me/syshardening7/
+   Once you've booted up, you can see a desktop containing 5 text files, Forensic Questions, which each contain a question and a spot for the answer. Each Forensic Question correctly answered gives you 10 points. You can also see a quick link to the README, an extremely important file containing scenario specific information that you must follow during your configuration of the machine. Along with this is your ScoringReport which displays the vulnerabilites you have gotten along with their point values and your total score. Here is what the README looks like: https://eth007.me/syshardening7/
  ![DesktopUbuntu](https://cdn.discordapp.com/attachments/998111098559549540/998710864641269932/Desktop.png)
  
 ## The Good Stuff 
 
-Here are all the vulnerabilities you had to fix in order to get 100
+Here are all the vulnerabilities that needed to be patched to get to 100
 
 ### Forensic Question 1 (10pts)
 ```
