@@ -55,7 +55,7 @@ EXAMPLE: /home/rooyay/Desktop/backdoor.py
 ANSWER: /lib/libsocket.so
 
 ```
-If you enable the firewall using the “sudo ufw enable” command, it will give a warning that /lib is world writable. This is not default. So when first approaching this question, the /lib directory would be a good place to look. If you look at the /lib directory there is a file called libsocket.so, a file which has a name that should already spark a red flag on some backdoor activity due to the “socket” in its name.
+If you enable the firewall using the “sudo ufw enable” command, it will give a warning that /lib is world writable. This is not default. So when first approaching this question, the /lib directory would be a good place to look. If you look at the /lib directory there is a file called libsocket.so. The file name alone should already spark a red flag regarding backdoor activity due to the word “socket” in its name.
 ![liblab](https://cdn.discordapp.com/attachments/998111098559549540/998706414170157166/unknown.png)
 
 ### Forensic Question 3 (10pts)
