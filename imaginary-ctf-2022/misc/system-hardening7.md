@@ -135,7 +135,7 @@ Kernel pointers point at a specific location in the kernel's memory. Attackers c
 Sysrq allows you to do a lot of functions such as resetting the machine by simply hitting buttons without logging in. To disable SYSRQ, we can do **kernel.sysrq = 0** in /etc/sysctl.conf
 
 ### Disabled SSH root login (4pts)
-Enabling root login for SSH can be pretty insecure as it can allow attackers to gain superuser privileges if they plan to breach your workstation via SSH. So it is always a good idea to set this parameter to "no". To apply this rule we can open the /etc/ssh/sshd_config file using "sudo gedit /etc/ssh/sshd_config", and then set the "PermitRooLogin" parameter to "no".
+Enabling root login for SSH can be pretty insecure as it can allow attackers to gain superuser privileges if they plan to breach your workstation via SSH. So it is always a good idea to set this parameter to "no". To apply this rule we can open the /etc/ssh/sshd_config file using "sudo gedit /etc/ssh/sshd_config", and then set the "PermitRootLogin" parameter to "no".
 ![sshroot](https://cdn.discordapp.com/attachments/998111098559549540/998732132321083503/unknown.png)
 
 ### Disabled SSH X11 Forwarding (4pts)
