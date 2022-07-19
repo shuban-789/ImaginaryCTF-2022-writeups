@@ -1,7 +1,5 @@
 # Team Cyberhawks Imaginary CTF 2022: System Hardening 7
-By: Shuban Pal, Will Cheng, Srijan Atti
-
-(Hyperion#8284, Prilasey#5045, Dudeamabobby#9580 on Discord)
+By: Hyperion#8284, Prilasey#5045, Dudeamabobby#9580
 
 ![meme](https://i.imgflip.com/6n6odr.jpg)
 
