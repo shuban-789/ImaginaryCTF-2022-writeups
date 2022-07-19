@@ -2,7 +2,7 @@
 By: Shuban Pal, Will Cheng, Srijan Atti
 (Hyperion#8284, Prilasey#5045, Dudeamabobby#9580)
 
-![meme](https://i.imgflip.com/6n6l8l.jpg)
+![meme](https://i.imgflip.com/6n6odr.jpg)
 
 ### The Challenge
    rooReaper wasn't lying when he said that he would be back. Seems that he's infiltrated the roos' new workstation! Can you investigate and secure the system?
