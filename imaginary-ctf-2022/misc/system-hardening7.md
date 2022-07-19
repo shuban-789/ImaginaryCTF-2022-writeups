@@ -141,7 +141,7 @@ Enabling root login for SSH can be pretty insecure as it can allow attackers to 
 ![sshroot](https://cdn.discordapp.com/attachments/998111098559549540/998732132321083503/unknown.png)
 
 ### Disabled SSH X11 Forwarding (4pts)
-X11 sessions weren’t created with security in mind. Servers can send X11 commands to the client, if the SSH server were to be compromised they could potentially hijack the X11 session with the client. To turn this off put X11Forward no in /etc/ssh/sshd_config.
+X11 allows for you to gain access to a GUI during SSH session through the utilization of the X server. Now, this isn't bad but this X server could be taken advantage of and used to set up many persistence methods and different attacks through a display manager. Attacks like this are quite common and to prevent this, set the "X11Forwarding" parameter to "no" in the /etc/ssh/sshd_config file.
 ![x11](https://cdn.discordapp.com/attachments/998111098559549540/998738156855763024/unknown.png)
 
 ### Disabled SSH password login (4pts)
