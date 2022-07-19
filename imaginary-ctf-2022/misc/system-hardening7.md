@@ -127,6 +127,7 @@ Address space layout randomization (ASLR) randomizes the position of processes i
 Symlinks have been known for having huge security issues. For example, attackers can leverage processes that write to temporary files and create a symlink to a more sensitive file. Protected_symlinks only allow symlinks to be followed if certain security conditions are met. You can enable symlink protection in /etc/sysctl.conf with: **fs.protected_symlinks = 1**
 
 ### TCP SYN cookies enabled (4 pts)
+SYN flood attacks, a type of dos attack, is where attackers can send a lot of SYN requests, filling the system's TCP connection table. Syncookies can verify whether or not the request is legitimate. To enable TCP SYN cookies, put **net.ipv4.tcp_syncookies = 1** in /etc/sysctl.conf
 
 ### Kernel pointers hidden from unprivileged users  (4 pts)
 Kernel pointers point at a specific location in the kernel's memory. Attackers can get a lot of information which can be used in several exploits. We want to hide these pointers regardless the privilege which we may do with **kernel.kptr_restrict = 2** in /etc/sysctl.conf
@@ -162,4 +163,4 @@ Flag: ictf{5a6a9093a22d86502368e7c1d31de30851f8c5cd06419728e8ade8c67715de8f}
 ## Memorable Moments
 ![memer](https://cdn.discordapp.com/attachments/998111098559549540/998755392605663242/unknown.png)
 
-sheeeeeeeeeeeeeeeeeeesh (first first blood moment. Had to google what a first blood was tho :skull:)
+sheeeeeeeeeeeeeeeeeeesh (first first blood moment. I had to google what a first blood was tho :skull:)
