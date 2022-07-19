@@ -87,7 +87,7 @@ EXAMPLE: /bin/passwd
 ANSWER: /lib/x86_64-linux-gnu/security/pam_deny.so
 
 ```
-If you've ever participated in any Red team VS Blue team, you'll know attackers love messing up authentication. One of the tricks they can do is replace the contents of the module pam_permit and pam_deny. In a pam stack, pam_permit says "yes" to everything. It pretty much always succeeds. pam_deny says "no to everything" and it always returns failure. However, if you replace the contents of the module, everything will succeed meaning you can authenticate by putting in any password. We can check if this is happening by looking at the hashes of the file. 
+If you've ever participated in a Red team VS Blue team (RvB), you'll know attackers love messing up authentication. One trick attackers commonly use is to replace the contents of the module pam_permit and pam_deny. In a pam stack, the pam_permit module does as its name suggests and says "yes" to everything. It always grants access while pam_deny always denies access. However, if you replace the contents of the module, everything will succeed meaning you can authenticate by putting in any password. We can check if this is happening by looking at the hashes of the file. 
 ![shasumsussy](https://cdn.discordapp.com/attachments/998111098559549540/998706818266169444/unknown.png)
 
 The hashes are the same! pam_deny.so has been replaced with the contents of pam_permit.so.
@@ -113,13 +113,13 @@ It is a good practice to check the /etc/group file to see if the right users are
 ![shadofpog](https://cdn.discordapp.com/attachments/998111098559549540/998721085359005806/unknown.png)
 
 ### Administrator group members correct (4pts)
-The README specifies that only rooYay should be an administrator. Administrator privileges can be controlled using groups as well as anyone in the “sudo” group basically has access to the sudo command which lets it execute commands as root. We do not want everyone to have access to the sudo command. That is why we need to check /etc/group to make sure only authorized admins have access to that command. We can use the command “sudo gedit /etc/group” to open the group file. The sudo group has basically every single user on the system when we do this, which is not something good as we should only be giving sudo access to those users who are stated as administrators in the README. To fix this, we can simply remove the username of everyone who is not authorized to use the sudo command.
+The README specifies that only rooyay should be an administrator. Anyone that is an administrator, or in the “sudo” group, basically has access to the sudo command which lets them execute commands as root. This could be very dangerous which is why we need to check /etc/group to make sure only authorized admins, or rooyay in this scenario, have access to this command. We can use the command “sudo gedit /etc/group” to open the group file. After opening, we see that the group has basically every single user on the system, which is obviously something we don't want as we should only be giving sudo access to those users who are stated as administrators in the README. To fix this, we can simply remove the username of everyone who is not authorized to use the sudo command.
 
 Before:
-![baddy](https://cdn.discordapp.com/attachments/998111098559549540/998727062066057257/unknown.png)
+![bad](https://cdn.discordapp.com/attachments/998111098559549540/998727062066057257/unknown.png)
 
 After:
-![goody](https://cdn.discordapp.com/attachments/998111098559549540/998727475213381683/unknown.png)
+![good](https://cdn.discordapp.com/attachments/998111098559549540/998727475213381683/unknown.png)
 
 ### Address space layout randomization enabled (4pts)
 Address space layout randomization (ASLR) randomizes the position of processes in the memory. This can protect systems from many attacks such as buffer overflow or memory exploitations as they would first require prior knowledge of where things are located. You can enable ASLR protection in /etc/sysctl.conf with: **kernel.randomize_va_space = 2**
@@ -145,7 +145,7 @@ X11 sessions weren’t created with security in mind. Servers can send X11 comma
 ![x11](https://cdn.discordapp.com/attachments/998111098559549540/998738156855763024/unknown.png)
 
 ### Disabled SSH password login (4pts)
-Since the README stated that public key authentication should be used EXCLUSIVELY. In other words, we need to get rid of all other methods of authentication which in this case is password authentication. To apply this, you put "PasswordAuthentication no" in /etc/ssh/sshd_config.
+Since the README stated that public key authentication should be used EXCLUSIVELY, we needed to get rid of all other methods of authentication which in this case was password authentication. To apply this, you put "PasswordAuthentication no" in /etc/ssh/sshd_config.
 ![sshpass](https://cdn.discordapp.com/attachments/998111098559549540/998731861775892490/unknown.png)
 
 ### Enabled SSH public key authentication (5pts)
@@ -163,5 +163,3 @@ Once you complete all these tasks, and your ScoringReport says you have earned 1
 Flag: ictf{5a6a9093a22d86502368e7c1d31de30851f8c5cd06419728e8ade8c67715de8f}
 ## Memorable Moments
 ![memer](https://cdn.discordapp.com/attachments/998111098559549540/998755392605663242/unknown.png)
-
-sheeeeeeeeeeeeeeeeeeesh (first first blood moment. I had to google what a first blood was tho :skull:)
