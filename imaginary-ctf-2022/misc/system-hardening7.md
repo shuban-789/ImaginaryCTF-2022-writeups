@@ -162,4 +162,4 @@ Flag: ictf{5a6a9093a22d86502368e7c1d31de30851f8c5cd06419728e8ade8c67715de8f}
 ## Memorable Moments
 ![memer](https://cdn.discordapp.com/attachments/998111098559549540/998755392605663242/unknown.png)
 
-sheeeeeeeeeeeeeeeeeeesh (first first blood moment. I had to google what a first blood was tho :skull:)
+sheeeeeeeeeeeeeeeeeeesh (first first blood moment. Had to google what a first blood was tho :skull:)
