@@ -158,7 +158,7 @@ Once you complete all these tasks, and your ScoringReport says you have earned 1
 ![flag](https://cdn.discordapp.com/attachments/998111098559549540/998736959772041236/unknown.png)
 
 Flag: ictf{5a6a9093a22d86502368e7c1d31de30851f8c5cd06419728e8ade8c67715de8f}
-## Memorable Momeents
-![shesh](https://cdn.discordapp.com/attachments/997732406490570793/998754131940474931/unknown.png)
+## Memorable Moments
+![memer](https://cdn.discordapp.com/attachments/998111098559549540/998755392605663242/unknown.png)
 
 sheeeeeeeeeeeeeeeeeeesh (first first blood moment. I had to google what a first blood was tho :skull:)
