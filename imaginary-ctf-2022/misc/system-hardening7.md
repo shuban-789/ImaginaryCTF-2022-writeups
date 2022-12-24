@@ -1,5 +1,5 @@
 # Team Cyberhawks Imaginary CTF 2022: System Hardening 7
-By: Hyperion#8284, Prilasey#5045, Dudeamabobby#9580
+By: Hyperion#3326, Prilasey#5045, Dudeamabobby#9580
 
 ![meme](https://i.imgflip.com/6n6odr.jpg)
 
