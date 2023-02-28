@@ -1,7 +1,7 @@
 # Team Cyberhawks Imaginary CTF 2022: System Hardening 7
 By: Hyperion#3326, Prilasey#5045, Dudeamabobby#9580
 
-![meme](https://i.imgflip.com/6n6odr.jpg)
+![meme](!https://i.imgflip.com/6n6odr.jpg)
 
 ### The Challenge
    rooReaper wasn't lying when he said that he would be back. Seems that he's infiltrated the roos' new workstation! Can you investigate and secure the system?
@@ -70,7 +70,7 @@ ANSWER: roomom
 
 ```
 To find a hidden user, or any user really, the best approach is to view the /etc/passwd file. You can use the cat command to do so and type “sudo cat /etc/passwd” into the terminal. If you view the users, you will come by an unauthorized user named roomom with a UID below 1000. On linux machines, all human users have a UID of above 1000 which is what earns roomom the name of a *hidden* user.
-![hiddenmomuser](!https://cdn.discordapp.com/attachments/998111098559549540/998721818124886116/unknown.png)
+![hiddenmomuser](https://cdn.discordapp.com/attachments/998111098559549540/998721818124886116/unknown.png)
 
 ### Forensic Question 4 (10pts)
 ```
